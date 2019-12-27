@@ -1,41 +1,28 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Slugify Extra [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/slugify-extra/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/slugify-extra)
 
-My awesome module.
+Slugify with better emoji support.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/slugify-extra.png)](https://npmjs.com/package/slugify-extra)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install slugify-extra
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const slugify = require("@sindresorhus/slugify")
+const slugifyExtra = require("slugify-extra");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+slugify("�😀");
+//=> ''
+
+slugifyExtra("�😀");
+//=> 'grinning-face'
 ```
 
 ## API
 
-### theModule(input, options?)
-
-#### input
-
-Type: `string`
-
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+See https://github.com/sindresorhus/slugify#api

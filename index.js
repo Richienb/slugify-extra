@@ -1,7 +1,14 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-    if (typeof input !== "string") throw new TypeError(`Expected a string, got ${typeof input}`)
+const slugify = require("@sindresorhus/slugify")
+const mimicFn = require("mimic-fn")
+const emojis = require("emoji.json")
+const mergeOptions = require("merge-options")
 
-    return `${input} & ${postfix}`
-}
+const customReplacements = emojis.map(({ char, name }) => [char, name])
+
+const slugifyExtra = mimicFn((string, options) => slugify(string, mergeOptions({ customReplacements }, options)), slugify)
+
+module.exports = slugifyExtra
+// TODO: Remove in next major release of @sindresorhus/slugify
+module.exports.default = slugifyExtra

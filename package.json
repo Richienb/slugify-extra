@@ -1,8 +1,8 @@
 {
-    "name": "the-module",
+    "name": "slugify-extra",
     "version": "0.0.0",
-    "description": "My awesome module.",
-    "repository": "https://github.com/Richienb/the-module.git",
+    "description": "Slugify with better emoji support.",
+    "repository": "https://github.com/Richienb/slugify-extra.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "main": "index.js",
@@ -11,14 +11,23 @@
         "index.d.ts"
     ],
     "engines": {
-        "node": ">=8"
+        "node": ">=8.3"
     },
     "scripts": {
         "lint": "xo",
         "test": "yarn lint && ava"
     },
-    "keywords": [],
-    "dependencies": {},
+    "keywords": [
+        "slugify",
+        "replace",
+        "emoji"
+    ],
+    "dependencies": {
+        "@sindresorhus/slugify": "^0.9.1",
+        "emoji.json": "^12.1.0",
+        "merge-options": "^2.0.0",
+        "mimic-fn": "^3.0.0"
+    },
     "devDependencies": {
         "ava": "^2.4.0",
         "eslint-config-richienb": "^0.2.3",
