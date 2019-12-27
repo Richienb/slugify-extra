@@ -1,6 +1,6 @@
 {
     "name": "slugify-extra",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Slugify with better emoji support.",
     "repository": "https://github.com/Richienb/slugify-extra.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
